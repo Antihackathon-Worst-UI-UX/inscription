@@ -1,30 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inscripcion Antihackathon</title>
+    <title>Inscripción Antihackathon</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="header">
-      <h1>La peor UI/UX del DCC</h1>
-      <p>
-        Por favor, complete el siguiente formulario para inscribirse en el
-        torneo.
-      </p>
-    </div>
-    <div class="form-container">
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdLmWbcQ4209geIxjtO-4hlA7j3CIoKmc8lqVt7Wud1sIi_PQ/viewform?embedded=true"
-        width="640"
-        height="1000"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0"
-      >
-        Cargando…
-      </iframe>
+    <div class="window">
+      <div class="title-bar">
+        <div class="title">Formulario de Inscripción</div>
+        <div class="controls">
+          <span class="min">_</span>
+          <span class="max">[]</span>
+          <span class="close">X</span>
+        </div>
+      </div>
+
+      <div class="window-body">
+        <header>
+          <h1 class="subtitle">DCChaotic UI</h1>
+          <p>
+            Por favor, complete el siguiente formulario para inscribirse en el
+            torneo.
+          </p>
+        </header>
+
+        <div class="form-container">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdLmWbcQ4209geIxjtO-4hlA7j3CIoKmc8lqVt7Wud1sIi_PQ/viewform?embedded=true"
+            width="100%"
+            height="1000"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Cargando…
+          </iframe>
+        </div>
+      </div>
     </div>
   </body>
 </html>
