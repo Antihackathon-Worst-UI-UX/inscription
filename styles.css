@@ -56,7 +56,7 @@ nav {
   box-shadow: 3px 3px 0 #000;
 }
 
-a nav{
+a nav {
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -86,6 +86,26 @@ ul {
 nav:hover {
   cursor: pointer;
   text-decoration: underline;
-  transform: scaleY(1.2);
+  transform: scaleY(1.1);
+  transition: transform 0.2s;
+}
+
+.nosotros {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nosotros a {
+  margin: 10px 0;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+}
+
+.nosotros p:hover {
+  transform: scaleY(1.1);
   transition: transform 0.2s;
 }
