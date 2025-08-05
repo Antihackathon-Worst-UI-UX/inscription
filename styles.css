@@ -14,6 +14,7 @@ body {
   width: min(900px, calc(100% - 20px));
   margin: 0 auto;
   box-shadow: 5px 5px 0 #000;
+  text-align: center;
 }
 
 /* Barra superior estilo título de ventana XP */
@@ -113,6 +114,7 @@ nav:hover {
 /* Listas con viñetas */
 ul {
   padding-left: clamp(15px, 3vw, 20px);
+  list-style: none;
 }
 
 /* Estilo de subtítulo */
@@ -277,4 +279,10 @@ ul {
 section {
   overflow-wrap: break-word;
   word-wrap: break-word;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+
 }
