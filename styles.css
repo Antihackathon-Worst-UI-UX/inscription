@@ -7,11 +7,11 @@ body {
   animation: background-color 0.5s ease-in-out;
 }
 
-/* Contenedor estilo ventana */
+/* Contenedor estilo ventana - responsive */
 .window {
   background-color: #c0c0c0;
   border: 2px solid #000;
-  width: 900px;
+  width: min(900px, calc(100% - 20px));
   margin: 0 auto;
   box-shadow: 5px 5px 0 #000;
 }
@@ -24,24 +24,60 @@ body {
   justify-content: space-between;
   padding: 4px 10px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: clamp(12px, 2.5vw, 14px);
   border-bottom: 2px solid black;
+  min-height: 20px;
 }
 
 /* Botones de la barra de título */
+.controls {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
 .controls span {
   display: inline-block;
   background-color: #c0c0c0;
   color: black;
   padding: 0 6px;
   border: 1px solid #000;
-  margin-left: 2px;
   cursor: pointer;
+  font-size: clamp(10px, 2vw, 14px);
 }
 
 /* Área interior de la ventana */
 .window-body {
-  padding: 20px;
+  padding: clamp(10px, 3vw, 20px);
+  overflow-x: auto;
+}
+
+/* Header responsive */
+.window-body header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* GIF banner responsive */
+header img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Texto responsive */
+header p, 
+section p,
+section li {
+  font-size: clamp(14px, 2.5vw, 16px);
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: clamp(18px, 3vw, 20px);
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 /* Estilo para enlaces tipo botón de XP */
@@ -54,6 +90,7 @@ nav {
   box-sizing: border-box;
   border: 2px solid black;
   box-shadow: 3px 3px 0 #000;
+  font-size: clamp(14px, 2.5vw, 16px);
 }
 
 a nav {
@@ -62,9 +99,16 @@ a nav {
   font-weight: bold;
 }
 
+nav:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  transform: scaleY(1.1);
+  transition: transform 0.2s;
+}
+
 /* Listas con viñetas */
 ul {
-  padding-left: 20px;
+  padding-left: clamp(15px, 3vw, 20px);
 }
 
 /* Estilo de subtítulo */
@@ -76,26 +120,18 @@ ul {
 .form-container iframe {
   border: 2px inset #808080;
   background-color: white;
+  width: 100%;
+  max-width: 100%;
 }
 
-.window-body header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-nav:hover {
-  cursor: pointer;
-  text-decoration: underline;
-  transform: scaleY(1.1);
-  transition: transform 0.2s;
-}
-
+/* Footer responsive */
 .nosotros {
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: clamp(5px, 2vw, 10px);
+  flex-wrap: wrap;
 }
 
 .nosotros a {
@@ -103,9 +139,70 @@ nav:hover {
   text-align: center;
   color: #000;
   text-decoration: none;
+  font-size: clamp(12px, 2.5vw, 14px);
+}
+
+.nosotros p {
+  margin: 5px;
 }
 
 .nosotros p:hover {
   transform: scaleY(1.1);
   transition: transform 0.2s;
+}
+
+/* Media queries para ajustes específicos */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  .window {
+    width: 100%;
+    box-shadow: 2px 2px 0 #000;
+  }
+  
+  .title-bar {
+    padding: 4px 5px;
+  }
+  
+  .controls span {
+    padding: 0 4px;
+  }
+  
+  ul {
+    padding-left: 15px;
+  }
+  
+  .nosotros {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .title {
+    font-size: 11px;
+  }
+  
+  .controls span {
+    font-size: 10px;
+    padding: 0 3px;
+  }
+}
+
+/* Para tablets y pantallas medianas */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .window {
+    width: calc(100% - 30px);
+  }
+}
+
+/* Prevenir overflow horizontal */
+* {
+  box-sizing: border-box;
+}
+
+section {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
