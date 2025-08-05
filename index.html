@@ -108,5 +108,51 @@
         </footer>
       </div>
     </div>
+
+    <div class="popup-overlay" id="popupOverlay"></div>
+    
+    <div class="bonzi-popup" id="bonziPopup">
+      <div class="title-bar">
+        <div class="title">¡Bonzi Buddy Says Hello!</div>
+        <div class="controls">
+          <span class="bonzi-close" id="bonziClose">X</span>
+        </div>
+      </div>
+      <div class="popup-content">
+        <p>¡Hola! ¿Realmente querías cerrar esta ventana?</p>
+        <img src="assets/r2d-reason2die-r2da-placerebuilder-gosinister-css-cool.gif" alt="Bonzi Buddy" />
+        <p>¡Te estoy vigilando! 👀</p>
+      </div>
+    </div>
+
+    <script>
+      const closeButton = document.querySelector('.close');
+      const bonziPopup = document.getElementById('bonziPopup');
+      const popupOverlay = document.getElementById('popupOverlay');
+      const bonziClose = document.getElementById('bonziClose');
+
+      closeButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        popupOverlay.style.display = 'block';
+        bonziPopup.style.display = 'block';
+      });
+
+      bonziClose.addEventListener('click', function() {
+        popupOverlay.style.display = 'none';
+        bonziPopup.style.display = 'none';
+      });
+
+      popupOverlay.addEventListener('click', function() {
+        popupOverlay.style.display = 'none';
+        bonziPopup.style.display = 'none';
+      });
+
+      setInterval(() => {
+        if (Math.random() < 0.001) {
+          popupOverlay.style.display = 'block';
+          bonziPopup.style.display = 'block';
+        }
+      }, 1000);
+    </script>
   </body>
 </html>
