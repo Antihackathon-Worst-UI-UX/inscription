@@ -1,6 +1,7 @@
 body {
-  background-color: #008080;
-  font-family: "Tahoma", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(100deg, #2e3b68, #8c93d2, #a688c8);
+  font-family: "Tahoma", sans-serif, system-ui, -apple-system;
   margin: 0;
   padding: 20px;
   color: black;
@@ -9,7 +10,7 @@ body {
 
 /* Contenedor estilo ventana - responsive */
 .window {
-  background-color: #c0c0c0;
+  background-color: #dad3d3;
   border: 2px solid #000;
   width: min(900px, calc(100% - 20px));
   margin: 0 auto;
@@ -72,7 +73,7 @@ header img {
 }
 
 /* Texto responsive */
-header p, 
+header p,
 section p,
 section li {
   font-size: clamp(14px, 2.5vw, 16px);
@@ -87,7 +88,7 @@ h2 {
 
 /* Estilo para enlaces tipo botón de XP */
 nav {
-  background-color: #0000ac;
+  background-color: #434996;
   padding: 10px;
   text-align: center;
   margin: 20px 0;
@@ -96,18 +97,19 @@ nav {
   border: 2px solid black;
   box-shadow: 3px 3px 0 #000;
   font-size: clamp(14px, 2.5vw, 16px);
+  text-decoration: none;
 }
 
 a nav {
   color: white;
-  text-decoration: none;
+
   font-weight: bold;
 }
 
 nav:hover {
   cursor: pointer;
-  text-decoration: underline;
-  transform: scaleY(1.1);
+  transform: scaleY(1.3);
+  transform: translateY(-4px);
   transition: transform 0.2s;
 }
 
@@ -225,28 +227,28 @@ ul {
   body {
     padding: 10px;
   }
-  
+
   .window {
     width: 100%;
     box-shadow: 2px 2px 0 #000;
   }
-  
+
   .title-bar {
     padding: 4px 5px;
   }
-  
+
   .controls span {
     padding: 0 4px;
   }
-  
+
   ul {
     padding-left: 15px;
   }
-  
+
   .nosotros {
     padding: 10px;
   }
-  
+
   .bonzi-popup {
     min-width: 250px;
     max-width: 95%;
@@ -257,7 +259,7 @@ ul {
   .title {
     font-size: 11px;
   }
-  
+
   .controls span {
     font-size: 10px;
     padding: 0 3px;
@@ -282,7 +284,6 @@ section {
 }
 
 .sections {
-    display: flex;
-    flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
 }

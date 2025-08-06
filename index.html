@@ -20,63 +20,61 @@
         <header>
           <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0"
             ><img
-              src="http://www.gigaglitters.com/created/wMkaWwHFOs.gif"
-              width="797"
+              src="http://www.gigaglitters.com/created/prYF8ibmww.gif"
+              width="700"
               height="93"
               border="0"
-              alt="http://www.rasaint.net/ - Glitter Graphics" /></a
-          >
-          <p class="subtitle">404 UI not Found</p>
-          <p>Participa de esta nueva <strong>Antihackaton</strong></p>
-          <p>
-            Inscríbete y crea la <del>Peor</del> Mejor UI/UX que puedas
-            imaginar. ¡Diviértete y aprende!
-          </p>
+              alt="http://www.rasaint.net/ - Glitter Graphics"
+          /></a>
+          <h3>
+            <strong>
+              ¡DCChaotic UI - Antihackathon 2025: Primera Edición!
+            </strong>
+          </h3>
+          <p>¿Cansad@ de las interfaces perfectas?</p>
+          <p>¡Diviértete, aprende y gana increíbles premios!</p>
         </header>
 
-        <a href="form.html">
+        <a style="text-decoration: none" href="form.html">
           <nav>Inscribirse al torneo</nav>
         </a>
         <div class="sections">
-            <section id="fechas">
-          <h2>🗓️ Fechas Importantes</h2>
-          <ul>
-            <li>Inicio de inscripciones: <strong>5 de agosto</strong></li>
-            <li>Cierre de inscripciones: <strong>13 de agosto</strong></li>
-            <li>Competencia: <strong>14-19 de agosto</strong></li>
-            <li>Entrega de resultados: <strong>22 de agosto</strong></li>
-          </ul>
-        </section>
+          <section id="fechas">
+            <h2>🗓️ Fechas Importantes</h2>
+            <ul>
+              <li>Inicio de inscripciones: <strong>5 de agosto</strong></li>
+              <li>Cierre de inscripciones: <strong>13 de agosto</strong></li>
+              <li>Competencia: <strong>14-19 de agosto</strong></li>
+              <li>Entrega de resultados: <strong>22 de agosto</strong></li>
+            </ul>
+          </section>
 
-        <section id="profesores">
-          <h2>👨‍🏫 Profesores Invitados</h2>
-          <ul>
-            <li>Prof. Hernan Valdivieso</li>
-            <li>Prof. Valeria Herskovic</li>
-            <li>Prof. Francisca Ibarra</li>
-          </ul>
-        </section>
+          <section id="profesores">
+            <h2>👨‍🏫 Profesores Invitados</h2>
+            <ul>
+              <li>Prof. Hernan Valdivieso</li>
+              <li>Prof. Valeria Herskovic</li>
+              <li>Prof. Francisca Ibarra</li>
+            </ul>
+          </section>
 
-    
-
+          <section id="reglas">
+            <h2>📜 Reglas del Torneo</h2>
+            <ul>
+              <li>
+                No se permite contenido ofensivo, discriminatorio o
+                irrespetuoso.
+              </li>
+              <li>
+                Puedes usar cualquier tecnología: HTML, CSS, JS, React, etc.
+              </li>
+              <li>
+                La UI debe ser funcional, aunque la experiencia sea caótica y
+                divertida.
+              </li>
+            </ul>
+          </section>
         </div>
-        <section id="reglas">
-          <h2>📜 Reglas del Torneo</h2>
-          <ul>
-            <li>
-              No se permite incluir contenido ofensivo, violento, racista,
-              sexista, xenofóbico, homofóbico o irrespetuoso.
-            </li>
-            <li>
-              Eres libre de usar cualquier tecnología: HTML/CSS/JS, React, etc.
-            </li>
-            <li>
-              Si bien la experiencia de usuario debe ser frustrante y/o
-              divertida, tu UI tiene que cumplir con su objetivo.
-            </li>
-          </ul>
-        </section>
-        
 
         <footer>
           <div class="nosotros">
@@ -95,7 +93,7 @@
     </div>
 
     <div class="popup-overlay" id="popupOverlay"></div>
-    
+
     <div class="bonzi-popup" id="bonziPopup">
       <div class="title-bar">
         <div class="title">¡Bonzi Buddy Says Hello!</div>
@@ -105,37 +103,40 @@
       </div>
       <div class="popup-content">
         <p>¡Hola! ¿Realmente querías cerrar esta ventana?</p>
-        <img src="assets/r2d-reason2die-r2da-placerebuilder-gosinister-css-cool.gif" alt="Bonzi Buddy" />
+        <img
+          src="assets/r2d-reason2die-r2da-placerebuilder-gosinister-css-cool.gif"
+          alt="Bonzi Buddy"
+        />
         <p>¡Te estoy vigilando! 👀</p>
       </div>
     </div>
 
     <script>
-      const closeButton = document.querySelector('.close');
-      const bonziPopup = document.getElementById('bonziPopup');
-      const popupOverlay = document.getElementById('popupOverlay');
-      const bonziClose = document.getElementById('bonziClose');
+      const closeButton = document.querySelector(".close");
+      const bonziPopup = document.getElementById("bonziPopup");
+      const popupOverlay = document.getElementById("popupOverlay");
+      const bonziClose = document.getElementById("bonziClose");
 
-      closeButton.addEventListener('click', function(e) {
+      closeButton.addEventListener("click", function (e) {
         e.preventDefault();
-        popupOverlay.style.display = 'block';
-        bonziPopup.style.display = 'block';
+        popupOverlay.style.display = "block";
+        bonziPopup.style.display = "block";
       });
 
-      bonziClose.addEventListener('click', function() {
-        popupOverlay.style.display = 'none';
-        bonziPopup.style.display = 'none';
+      bonziClose.addEventListener("click", function () {
+        popupOverlay.style.display = "none";
+        bonziPopup.style.display = "none";
       });
 
-      popupOverlay.addEventListener('click', function() {
-        popupOverlay.style.display = 'none';
-        bonziPopup.style.display = 'none';
+      popupOverlay.addEventListener("click", function () {
+        popupOverlay.style.display = "none";
+        bonziPopup.style.display = "none";
       });
 
       setInterval(() => {
         if (Math.random() < 0.001) {
-          popupOverlay.style.display = 'block';
-          bonziPopup.style.display = 'block';
+          popupOverlay.style.display = "block";
+          bonziPopup.style.display = "block";
         }
       }, 1000);
     </script>
