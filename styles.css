@@ -285,3 +285,31 @@ section {
   display: flex;
   flex-direction: column;
 }
+
+.ver-mas-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.ver-mas {
+  background-color: #434996;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  margin: 20px 0;
+  width: 30%;
+  box-sizing: border-box;
+  border: 2px solid black;
+  box-shadow: 3px 3px 0 #000;
+  font-size: clamp(14px, 2.5vw, 16px);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.reglas-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
