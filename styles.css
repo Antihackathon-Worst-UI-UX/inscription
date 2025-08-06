@@ -10,7 +10,7 @@ body {
 
 /* Contenedor estilo ventana - responsive */
 .window {
-  background-color: #ffffff83;
+  background-color: #ffffffb5;
   border: 2px solid #000;
   width: min(900px, calc(100% - 20px));
   margin: 0 auto;
