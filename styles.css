@@ -1,6 +1,6 @@
 body {
   min-height: 100vh;
-  background: linear-gradient(100deg, #2e3b68, #8c93d2, #a688c8);
+  background: linear-gradient(100deg, #2e3b68, #8c93d2, #7272a8);
   font-family: "Tahoma", sans-serif, system-ui, -apple-system;
   margin: 0;
   padding: 20px;
@@ -10,7 +10,7 @@ body {
 
 /* Contenedor estilo ventana - responsive */
 .window {
-  background-color: #dad3d3;
+  background-color: #ffffff83;
   border: 2px solid #000;
   width: min(900px, calc(100% - 20px));
   margin: 0 auto;
@@ -126,8 +126,6 @@ ul {
 }
 
 .form-container iframe {
-  border: 2px inset #808080;
-  background-color: white;
   width: 100%;
   max-width: 100%;
 }
